@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+h1  {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+  text-indent: 1.5em;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 2rem;
+  margin-bottom: 100px;
+}
+
+.alert-title {
+    color: rgb(114, 28, 36);
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-bottom-right-radius: .25rem;
+    border-top-right-radius: .25rem;
+    box-shadow: 3px 0px 0px 0px rgba(114,28,36,0.75) inset;
+      -webkit-box-shadow: 3px 0px 0px 0px rgba(114,28,36,0.75) inset;
+      -moz-box-shadow: 3px 0px 0px 0px rgba(114,28,36,0.75) inset;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+[data-ripple] {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 9999px;
+  animation: ripple-animation 2s;
+}
+
+@keyframes ripple-animation {
+  from {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(100);
+    opacity: 0;
+  }
+}
+
+.aks-accordion {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.aks-accordion-item {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+  padding-top: 20px;
+  padding-right: 5px;
+  padding-bottom: 12px;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.aks-accordion-item-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.aks-accordion-item-icon {
+  width: 25px;
+  height: 25px;
+  background: #252525;
+  border-radius: 9999px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  text-align: center;
+}
+.aks-accordion-item-icon svg {
+  width: 15px;
+  fill: white;
+  margin: 0 auto;
+}
+.aks-accordion-item-title {
+  width: 90%;
+  text-align: left;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+.aks-accordion-item-title h4 {
+  margin: 0;
+}
+.aks-accordion-item-content {
+  display: none;
+  width: 100%;
+  padding-top: 12px;
+  padding-right: 8px;
+  padding-bottom: 0;
+  padding-left: 42px;
+  overflow: hidden;
+  word-break: break-word;
+  width: 88%;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.aks-accordion-item.opened .aks-accordion-item-icon-open {
+  display: none;
+}
+.aks-accordion-item-icon-close {
+  display: none;
+}
+.aks-accordion-item.opened .aks-accordion-item-icon-close {
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .aks-accordion {
+    width: 100%;
+  }
+  .aks-accordion-item-content {
+    padding-left: 11px;
+    width: 92%;
+  }
+}
